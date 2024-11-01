@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { Children, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -8,13 +8,30 @@ import {
 } from "react-router-dom";
 import Root from './components/Root/Root.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import Home from './components/Home/Home.jsx';
+import ListedBook from './components/ListedBook/ListedBook.jsx';
+import PagesRead from './components/PagesRead/PagesRead.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <ErrorPage></ErrorPage>
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
+      {
+        path: "listedBooks",
+        element:<ListedBook></ListedBook>
+      },
+      {
+        path:"pageRead",
+        element: <PagesRead></PagesRead>
+      }
+    ]
   },
 ]);
 

@@ -1,10 +1,14 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Root = () => {
     return (
-        <div>
+        <div className='lg:max-w-screen-xl lg:mx-auto'>
             <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

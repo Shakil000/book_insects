@@ -9,7 +9,7 @@ const ErrorPage = () => {
         </div>
         <div className='flex items-center justify-center'>
             <p className='-mt-96 absolute text-4xl text-red-500'>You are in wrong place!! Please Go Back !!</p>
-            <button className='btn btn-warning -mt-48 absolute'>Go Back</button>
+            <button className='btn btn-error -mt-48 absolute'>Go Back</button>
         </div>
         </div>
     );
